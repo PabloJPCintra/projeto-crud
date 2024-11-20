@@ -133,6 +133,21 @@ def sugestao_treino():
             linhas = file.readlines()
             if len(linhas) <= 1:
                 print("Nenhum treino registrado para sugerir.")
+
+# Commit 17: Função sugestao_treino (Parte 2)
+
+            else:
+                ultimo_treino = linhas[-1].strip().split('|')
+                try:
+                    distancia_sugerida = float(ultimo_treino[2]) + 1
+                    tempo_sugerido = float(ultimo_treino[3]) + 5
+                    print(f"Sugestão de treino: {distancia_sugerida:.2f} km em {tempo_sugerido:.2f} minutos.")
+                except ValueError:
+                    print("Erro ao processar os dados do último treino. Verifique o formato do arquivo.")
+    except FileNotFoundError:
+        print("Arquivo de registros não encontrado.")
+    input("Pressione Enter para continuar...")
+
 #Commit 20: Função analise_desempenho (Parte 3)
 
                 if distancia not in melhor_rendimento or ritmo < melhor_rendimento[distancia]:
