@@ -206,3 +206,35 @@ def filtrar_registros():
     print("1. Filtrar por Distância")
     print("2. Filtrar por Tempo")
     criterio = input("Escolha uma opção: ")
+
+#Commit 22: Função filtrar_registros (Parte 2)
+
+    if criterio == "1":
+        while True:
+            distancia_min_input = input("Distância mínima (km): ")
+            if not distancia_min_input.replace('.', '', 1).isdigit():
+                print("Erro: A distância mínima deve ser um número válido. Tente novamente.")
+            else:
+                distancia_min = float(distancia_min_input)
+                if distancia_min <= 0:
+                    print("Erro: A distância mínima deve ser maior que 0. Tente novamente.")
+                else:
+                    break
+
+Aqui estão os commits restantes:
+
+#Commit 23: Função filtrar_registros (Parte 3)
+
+        try:
+            with open(FILENAME, mode='r', encoding='utf-8') as file:
+                linhas = file.readlines()
+                registros_filtrados = [linha.strip() for linha in linhas[1:] if float(linha.strip().split('|')[2]) >= distancia_min]
+                if registros_filtrados:
+                    print("Registros filtrados por distância:")
+                    for registro in registros_filtrados:
+                        print(registro)
+                else:
+                    print("Nenhum registro encontrado com essa distância mínima.")
+        except FileNotFoundError:
+            print("Arquivo de registros não encontrado.")
+
