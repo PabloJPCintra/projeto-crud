@@ -89,6 +89,13 @@ def listar_registros():
     except FileNotFoundError:
         print("Arquivo de registros não encontrado.")
     input("Pressione Enter para continuar...")
+
+#Commit 11: Função definir_meta (Parte 1)
+
+def definir_meta():
+    limpar_tela()
+    print("=== Definir Meta Pessoal ===")
+    meta = input("Defina a meta (ex.: Correr 100 km no mês): ")
                 
 # Commit 12: Função definir_meta (Parte 2)
     while True:
