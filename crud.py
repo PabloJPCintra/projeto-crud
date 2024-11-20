@@ -15,6 +15,17 @@ def inicializar_arquivos():
     if not os.path.exists(METAS_FILENAME):
         with open(METAS_FILENAME, mode='w', encoding='utf-8') as file:
             file.write("Meta|Valor|Progresso\n")
+
+#Commit 3: Função gerar_id
+
+def gerar_id():
+    try:
+        with open(FILENAME, mode='r', encoding='utf-8') as file:
+            linhas = file.readlines()
+            return len(linhas)
+    except FileNotFoundError:
+        return 1
+        
 #Commit 4: Função adicionar_registro (Parte 1)
 
 def adicionar_registro():
@@ -40,12 +51,3 @@ def adicionar_registro():
         except ValueError as e:
             print(f"Erro: {e}. Tente novamente.")
 
-#Commit 3: Função gerar_id
-
-def gerar_id():
-    try:
-        with open(FILENAME, mode='r', encoding='utf-8') as file:
-            linhas = file.readlines()
-            return len(linhas)
-    except FileNotFoundError:
-        return 1
