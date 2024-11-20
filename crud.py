@@ -40,3 +40,12 @@ def adicionar_registro():
         except ValueError as e:
             print(f"Erro: {e}. Tente novamente.")
 
+#Commit 3: Função gerar_id
+
+def gerar_id():
+    try:
+        with open(FILENAME, mode='r', encoding='utf-8') as file:
+            linhas = file.readlines()
+            return len(linhas)
+    except FileNotFoundError:
+        return 1
