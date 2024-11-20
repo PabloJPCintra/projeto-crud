@@ -21,7 +21,15 @@ def adicionar_registro():
     limpar_tela()
     print("=== Adicionar Novo Treino ou Competição ===")
     data = input("Data (DD-MM-AAAA): ")
-    
+
+#Commit 7: Função adicionar_registro (Parte 4)
+
+    localizacao = input("Localização: ")
+    clima = input("Condições Climáticas: ")
+    tipo = input("Tipo (Treino/Competição): ")
+    novo_id = gerar_id()
+    registro = f"{novo_id}|{data}|{distancia}|{tempo}|{localizacao}|{clima}|{tipo}\n"
+
 #Commit 12: Função definir_meta (Parte 2)
     while True:
         try:
