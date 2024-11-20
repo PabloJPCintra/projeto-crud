@@ -70,16 +70,6 @@ def adicionar_registro():
     with open(FILENAME, mode='a', encoding='utf-8') as file:
         file.write(registro)
     input("Registro adicionado com sucesso! Pressione Enter para continuar...")
-
-#Commit 16: Função sugestao_treino (Parte 1)
-
-def sugestao_treino():
-    limpar_tela()
-    try:
-        with open(FILENAME, mode='r', encoding='utf-8') as file:
-            linhas = file.readlines()
-            if len(linhas) <= 1:
-                print("Nenhum treino registrado para sugerir.")
                 
 # Commit 12: Função definir_meta (Parte 2)
     while True:
@@ -91,3 +81,12 @@ def sugestao_treino():
         except ValueError as e:
             print(f"Erro: {e}. Tente novamente.")
 
+#Commit 16: Função sugestao_treino (Parte 1)
+
+def sugestao_treino():
+    limpar_tela()
+    try:
+        with open(FILENAME, mode='r', encoding='utf-8') as file:
+            linhas = file.readlines()
+            if len(linhas) <= 1:
+                print("Nenhum treino registrado para sugerir.")
