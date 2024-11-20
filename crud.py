@@ -81,6 +81,14 @@ def adicionar_registro():
         except ValueError as e:
             print(f"Erro: {e}. Tente novamente.")
 
+#Commit 13: Função definir_meta (Parte 3)
+
+    with open(METAS_FILENAME, mode='a', encoding='utf-8') as file:
+        file.write(f"{meta}|{valor}|0\n")
+    input("Meta definida com sucesso! Pressione Enter para continuar...")
+
+
+
 #Commit 16: Função sugestao_treino (Parte 1)
 
 def sugestao_treino():
