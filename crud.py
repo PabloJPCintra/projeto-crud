@@ -5,7 +5,7 @@ import os
 def limpar_tela():
     os.system("cls" if os.name == "nt" else "clear")
 
-# Commit 2: Variáveis de arquivos e função inicializar_arquivos
+#Commit 2: Variáveis de arquivos e função inicializar_arquivos
     
     FILENAME = "treinos.txt"
 METAS_FILENAME = "metas.txt"
