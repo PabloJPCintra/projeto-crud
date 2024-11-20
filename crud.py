@@ -168,7 +168,7 @@ def analise_desempenho():
                 print("Nenhum registro encontrado para análise.")
                 return
 
-            #Commit 19: Função analise_desempenho (Parte 2)
+#Commit 19: Função analise_desempenho (Parte 2)
 
             distancia_total = 0
             tempo_total = 0
@@ -252,3 +252,20 @@ Aqui estão os commits restantes:
                 else:
                     break
 
+# Commit 25: Função filtrar_registros (Parte 5)
+
+        try:
+            with open(FILENAME, mode='r', encoding='utf-8') as file:
+                linhas = file.readlines()
+                registros_filtrados = [linha.strip() for linha in linhas[1:] if float(linha.strip().split('|')[3]) <= tempo_max]
+                if registros_filtrados:
+                    print("Registros filtrados por tempo:")
+                    for registro in registros_filtrados:
+                        print(registro)
+                else:
+                    print("Nenhum registro encontrado com esse tempo máximo.")
+        except FileNotFoundError:
+            print("Arquivo de registros não encontrado.")
+    else:
+        print("Opção inválida.")
+    input("Pressione Enter para continuar...")
