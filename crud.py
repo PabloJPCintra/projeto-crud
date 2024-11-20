@@ -80,7 +80,15 @@ def listar_registros():
             linhas = file.readlines()
             if len(linhas) <= 1:
                 print("Nenhum registro encontrado.")
+#Commit 10: Função listar_registros (Parte 2)
 
+            else:
+                print("=== Todos os Registros ===")
+                for linha in linhas[1:]:
+                    print(linha.strip())
+    except FileNotFoundError:
+        print("Arquivo de registros não encontrado.")
+    input("Pressione Enter para continuar...")
                 
 # Commit 12: Função definir_meta (Parte 2)
     while True:
