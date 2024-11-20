@@ -168,6 +168,22 @@ def analise_desempenho():
                 print("Nenhum registro encontrado para análise.")
                 return
 
+            #Commit 19: Função analise_desempenho (Parte 2)
+
+            distancia_total = 0
+            tempo_total = 0
+            melhor_rendimento = {}
+
+            for linha in linhas[1:]:
+                dados = linha.strip().split('|')
+                distancia = float(dados[2])
+                tempo = float(dados[3])
+                ritmo = tempo / distancia
+                distancia_total += distancia
+                tempo_total += tempo
+
+
+
 # Commit 20: Função analise_desempenho (Parte 3)
 
                 if distancia not in melhor_rendimento or ritmo < melhor_rendimento[distancia]:
