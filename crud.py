@@ -1,3 +1,5 @@
+Commit 1: Função limpar_tela
+
 import os
 
 def limpar_tela():
