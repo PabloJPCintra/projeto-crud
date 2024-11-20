@@ -23,14 +23,23 @@ Função adicionar_registro() :
 Permite ao usuário adicionar um novo treino ou competição, registrando informações como:
 
 1)Data
+
 2)Distância
+
 3)Tempo
+
 4)Local
+
 5)Condições climáticas
+
 6)Tipo do evento
+
 7)Esses dados são então armazenados no arquivo treinos.txt.
+
 8)Função listar_registros()
+
 9)Exibe todos os registros contidos no arquivo treinos.txt.
+
 
 Função definir_meta() :
 Permite ao usuário definir uma meta, como correr uma determinada distância em um mês. A meta é registrada no arquivo metas.txt.
@@ -45,8 +54,11 @@ Função analise_desempenho() :
 Realiza uma análise detalhada do desempenho do corredor, incluindo:
 
 1)Distância total percorrida
+
 2)Tempo total gasto
+
 3)Melhor ritmo por distância Para cada distância registrada.
+
 
 Função filtrar_registros() :
 Permite ao usuário filtrar os registros com base em critérios específicos, como:
