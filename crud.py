@@ -1,4 +1,4 @@
-# Commit 1: Função limpar_tela
+#Commit 1: Função limpar_tela
 
 import os
 
