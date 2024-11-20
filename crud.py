@@ -4,6 +4,18 @@ import os
 
 def limpar_tela():
     os.system("cls" if os.name == "nt" else "clear")
+
+#Commit 2: Variáveis de arquivos e função inicializar_arquivos
+    FILENAME = "treinos.txt"
+METAS_FILENAME = "metas.txt"
+
+def inicializar_arquivos():
+    if not os.path.exists(FILENAME):
+        with open(FILENAME, mode='w', encoding='utf-8') as file:
+            file.write("ID|Data|Distância (km)|Tempo (min)|Localização|Clima|Tipo\n")
+    if not os.path.exists(METAS_FILENAME):
+        with open(METAS_FILENAME, mode='w', encoding='utf-8') as file:
+            file.write("Meta|Valor|Progresso\n")
     
 #Commit 12: Função definir_meta (Parte 2)
     while True:
