@@ -33,6 +33,17 @@ def adicionar_registro():
     print("=== Adicionar Novo Treino ou Competição ===")
     data = input("Data (DD-MM-AAAA): ")
 
+#Commit 5: Função adicionar_registro (Parte 2)
+
+    while True:
+        try:
+            distancia = float(input("Distância (km): "))
+            if distancia <= 0:
+                raise ValueError("Distância deve ser maior que 0.")
+            break
+        except ValueError as e:
+            print(f"Erro: {e}. Tente novamente.")
+            
 #Commit 6: Função adicionar_registro (Parte 3)
 
     while True:
