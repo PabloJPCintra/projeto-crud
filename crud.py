@@ -122,7 +122,16 @@ def verificar_metas():
             metas = file.readlines()
             if not metas:
                 print("Nenhuma meta definida.")
+                
+#Commit 15: Função verificar_metas (Parte 2)
 
+            else:
+                print("=== Metas Pessoais ===")
+                for meta in metas:
+                    print(meta.strip())
+    except FileNotFoundError:
+        print("Arquivo de metas não encontrado.")
+    input("Pressione Enter para continuar...")
 
 #Commit 16: Função sugestao_treino (Parte 1)
 
