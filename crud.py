@@ -123,7 +123,7 @@ def verificar_metas():
             if not metas:
                 print("Nenhuma meta definida.")
                 
-#Commit 15: Função verificar_metas (Parte 2)
+# Commit 15: Função verificar_metas (Parte 2)
 
             else:
                 print("=== Metas Pessoais ===")
@@ -133,7 +133,7 @@ def verificar_metas():
         print("Arquivo de metas não encontrado.")
     input("Pressione Enter para continuar...")
 
-#Commit 16: Função sugestao_treino (Parte 1)
+# Commit 16: Função sugestao_treino (Parte 1)
 
 def sugestao_treino():
     limpar_tela()
@@ -157,7 +157,18 @@ def sugestao_treino():
         print("Arquivo de registros não encontrado.")
     input("Pressione Enter para continuar...")
 
-#Commit 20: Função analise_desempenho (Parte 3)
+# Commit 18: Função analise_desempenho (Parte 1)
+
+def analise_desempenho():
+    limpar_tela()
+    try:
+        with open(FILENAME, mode='r', encoding='utf-8') as file:
+            linhas = file.readlines()
+            if len(linhas) <= 1:
+                print("Nenhum registro encontrado para análise.")
+                return
+
+# Commit 20: Função analise_desempenho (Parte 3)
 
                 if distancia not in melhor_rendimento or ritmo < melhor_rendimento[distancia]:
                     melhor_rendimento[distancia] = ritmo
