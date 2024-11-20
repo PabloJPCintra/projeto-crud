@@ -181,3 +181,12 @@ def analise_desempenho():
     except FileNotFoundError:
         print("Arquivo de registros não encontrado.")
     input("Pressione Enter para continuar...")
+
+# Commit 21: Função filtrar_registros (Parte 1)
+
+def filtrar_registros():
+    limpar_tela()
+    print("Escolha um critério de filtragem:")
+    print("1. Filtrar por Distância")
+    print("2. Filtrar por Tempo")
+    criterio = input("Escolha uma opção: ")
