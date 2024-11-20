@@ -1,10 +1,12 @@
 # Commit 1: Função limpar_tela
+
 import os
 
 def limpar_tela():
     os.system("cls" if os.name == "nt" else "clear")
 
-#Commit 2: Variáveis de arquivos e função inicializar_arquivos
+# Commit 2: Variáveis de arquivos e função inicializar_arquivos
+    
     FILENAME = "treinos.txt"
 METAS_FILENAME = "metas.txt"
 
@@ -16,7 +18,7 @@ def inicializar_arquivos():
         with open(METAS_FILENAME, mode='w', encoding='utf-8') as file:
             file.write("Meta|Valor|Progresso\n")
 
-#Commit 3: Função gerar_id
+# Commit 3: Função gerar_id
 
 def gerar_id():
     try:
@@ -26,14 +28,14 @@ def gerar_id():
     except FileNotFoundError:
         return 1
         
-#Commit 4: Função adicionar_registro (Parte 1)
+# Commit 4: Função adicionar_registro (Parte 1)
 
 def adicionar_registro():
     limpar_tela()
     print("=== Adicionar Novo Treino ou Competição ===")
     data = input("Data (DD-MM-AAAA): ")
 
-#Commit 5: Função adicionar_registro (Parte 2)
+# Commit 5: Função adicionar_registro (Parte 2)
 
     while True:
         try:
@@ -44,7 +46,7 @@ def adicionar_registro():
         except ValueError as e:
             print(f"Erro: {e}. Tente novamente.")
             
-#Commit 6: Função adicionar_registro (Parte 3)
+# Commit 6: Função adicionar_registro (Parte 3)
 
     while True:
         try:
@@ -55,9 +57,7 @@ def adicionar_registro():
         except ValueError as e:
             print(f"Erro: {e}. Tente novamente.")
 
-
-    
-#Commit 7: Função adicionar_registro (Parte 4)
+# Commit 7: Função adicionar_registro (Parte 4)
 
     localizacao = input("Localização: ")
     clima = input("Condições Climáticas: ")
@@ -65,7 +65,14 @@ def adicionar_registro():
     novo_id = gerar_id()
     registro = f"{novo_id}|{data}|{distancia}|{tempo}|{localizacao}|{clima}|{tipo}\n"
 
-#Commit 12: Função definir_meta (Parte 2)
+# Commit 8: Função adicionar_registro (Parte 5)
+
+    with open(FILENAME, mode='a', encoding='utf-8') as file:
+        file.write(registro)
+    input("Registro adicionado com sucesso! Pressione Enter para continuar...")
+
+
+# Commit 12: Função definir_meta (Parte 2)
     while True:
         try:
             valor = float(input("Qual o valor da meta (ex.: 100 km): "))
