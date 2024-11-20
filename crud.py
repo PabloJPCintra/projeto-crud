@@ -238,3 +238,17 @@ Aqui estão os commits restantes:
         except FileNotFoundError:
             print("Arquivo de registros não encontrado.")
 
+#Commit 24: Função filtrar_registros (Parte 4)
+
+    elif criterio == "2":
+        while True:
+            tempo_max_input = input("Tempo máximo (min): ")
+            if not tempo_max_input.replace('.', '', 1).isdigit():
+                print("Erro: O tempo máximo deve ser um número válido. Tente novamente.")
+            else:
+                tempo_max = float(tempo_max_input)
+                if tempo_max <= 0:
+                    print("Erro: O tempo máximo deve ser maior que 0. Tente novamente.")
+                else:
+                    break
+
