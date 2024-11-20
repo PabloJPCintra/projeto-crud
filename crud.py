@@ -70,6 +70,17 @@ def adicionar_registro():
     with open(FILENAME, mode='a', encoding='utf-8') as file:
         file.write(registro)
     input("Registro adicionado com sucesso! Pressione Enter para continuar...")
+    
+#Commit 9: Função listar_registros (Parte 1)
+
+def listar_registros():
+    limpar_tela()
+    try:
+        with open(FILENAME, mode='r', encoding='utf-8') as file:
+            linhas = file.readlines()
+            if len(linhas) <= 1:
+                print("Nenhum registro encontrado.")
+
                 
 # Commit 12: Função definir_meta (Parte 2)
     while True:
