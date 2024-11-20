@@ -133,3 +133,16 @@ def sugestao_treino():
             linhas = file.readlines()
             if len(linhas) <= 1:
                 print("Nenhum treino registrado para sugerir.")
+#Commit 20: Função analise_desempenho (Parte 3)
+
+                if distancia not in melhor_rendimento or ritmo < melhor_rendimento[distancia]:
+                    melhor_rendimento[distancia] = ritmo
+
+            print(f"Distância total percorrida: {distancia_total:.2f} km")
+            print(f"Tempo total: {tempo_total:.2f} minutos")
+            print("Melhor ritmo por distância:")
+            for distancia, ritmo in melhor_rendimento.items():
+                print(f"{distancia} km: {ritmo:.2f} min/km")
+    except FileNotFoundError:
+        print("Arquivo de registros não encontrado.")
+    input("Pressione Enter para continuar...")
