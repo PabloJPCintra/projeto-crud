@@ -33,6 +33,19 @@ def adicionar_registro():
     print("=== Adicionar Novo Treino ou Competição ===")
     data = input("Data (DD-MM-AAAA): ")
 
+#Commit 6: Função adicionar_registro (Parte 3)
+
+    while True:
+        try:
+            tempo = float(input("Tempo (minutos): "))
+            if tempo <= 0:
+                raise ValueError("Tempo deve ser maior que 0.")
+            break
+        except ValueError as e:
+            print(f"Erro: {e}. Tente novamente.")
+
+
+    
 #Commit 7: Função adicionar_registro (Parte 4)
 
     localizacao = input("Localização: ")
